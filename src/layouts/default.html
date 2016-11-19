@@ -7,13 +7,16 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation for Sites</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
   </head>
   <body>
-
+    {{> nav}}
+    {{> logo}}
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
     {{> body}}
-
+    
     <script src="{{root}}assets/js/app.js"></script>
+    <script src="https://use.fontawesome.com/574a157edd.js"></script>
   </body>
 </html>

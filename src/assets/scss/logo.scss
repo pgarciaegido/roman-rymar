@@ -1,0 +1,17 @@
+#logo-container{
+	img{
+		width: 385px;
+		height: auto;
+	}
+	i{
+		font-size: 2.5em;
+		padding: 10px;
+		color: $yellow;
+	}
+}
+
+@media (max-width: 640px){
+	#logo-container{
+		padding: 0 10px;
+	}
+}

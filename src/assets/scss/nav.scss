@@ -1,0 +1,19 @@
+#navbar-container{
+	background-color: $dark-blue;
+	padding: .5em;
+	margin-bottom: $baseline;
+	img{
+		margin-top: 5px;
+		min-width: 200px;
+		max-width: 200px;
+	}
+	#menu-container{
+		a{
+			color: white;
+			font-weight: 700;
+		}
+		a:hover{
+			color: $yellow;
+		}
+	}
+}
