@@ -1,0 +1,25 @@
+#bio-container{
+	.bio-header{
+		background-color: $yellow;
+	}
+	.bio-content{
+		position: relative;
+		img{
+			position: absolute;
+			top: -92px;
+			left: -120px;
+		}
+		h4{
+			margin-bottom: 75px;
+			font-size: 2em;
+		}
+		h1{
+			margin-bottom: 100px;
+			font-weight: 900;
+			font-size: 6em;
+		}
+		.bio-button{
+			background-color: $blue;		
+		}
+	}
+}

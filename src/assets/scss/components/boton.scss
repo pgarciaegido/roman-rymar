@@ -1,0 +1,16 @@
+.boton{
+	width: 240px;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	box-shadow: $box-shadow;
+	margin-bottom: 75px;
+	p{
+		color: white;
+		margin: 0;
+		font-size: 2em;
+		font-weight: 700;
+	}
+}

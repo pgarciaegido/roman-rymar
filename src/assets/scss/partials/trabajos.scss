@@ -1,0 +1,54 @@
+#trabajos-container{
+	.trabajos-header{
+		background-color: $blue;
+	}
+	.trabajos-content{
+		.trabajos-topics{
+			background-color: white;
+			padding-right: 10px;
+			border-radius: 2px;
+			box-shadow: $box-shadow;
+			padding: 10px;
+			h3{
+				color: $yellow;
+				font-family: 'Bree Serif', serif;
+			}
+			.fichas{
+				background-color: $blue;
+				border-radius: 5px;
+				padding: 10px;
+				cursor: pointer;
+				margin-bottom: 10px;
+				img{
+					height: 100px;
+				}
+				i{
+					color: white;
+					margin-top: 7px;
+					margin-right: 5px;
+				}
+				p{
+					color: white;
+					margin: 0;
+					text-align: center;
+					padding-bottom: 5px;
+					margin-top: 5px;
+					border-bottom: 1px solid #38697C;
+				}
+				p:first-child{
+					margin-top: 0;
+				}
+				p:last-child{
+					border: none;
+				}
+				&-nombre{
+					font-weight: 700;
+					font-size: 1.2em;
+				}
+				&-director{
+					font-style: italic;
+				}
+			}
+		}
+	}
+}
