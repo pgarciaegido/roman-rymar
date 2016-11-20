@@ -574,8 +574,15 @@ COLORS
 $dark-blue: #29303A;
 $yellow: #EEAD1A;
 $blue: #2F5D74;
+$gray-bg: #F2F2F2;
 
 /*
 LAYOUT
 */
 $baseline: 22px;
+$divider: 44px;
+
+/*
+EFFECTS
+*/
+$box-shadow:0 3px 8px rgba($black, .2);

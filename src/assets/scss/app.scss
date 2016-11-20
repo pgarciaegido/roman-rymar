@@ -51,9 +51,22 @@
 
 //MY WEB
 
-body{
+@mixin grid-column-unposition {
+position: static;
+margin-left: 0;
+margin-right: 0;
+float: left; // add this to work
+}
+
+body, h1, h2, h3, h4, h5, h6{
 	font-family: 'Lato', sans-serif;
+}
+
+body{
+	background-color: $gray-bg;
 }
 
 @import 'nav';
 @import 'logo';
+@import 'video';
+@import 'bio';
