@@ -1,0 +1,35 @@
+#footer-container{
+	padding: $baseline 0;
+	background-color: $dark-blue;
+	img{
+		width: 100px;
+		height: auto;
+	}
+	nav{
+		ul{
+			margin-bottom: $baseline;
+			li{
+				a{
+					color: white;
+					font-size: 1.2em;
+					font-weight: 700;
+				}
+				a:hover{
+					color: $yellow;
+				}
+			}
+		}
+	}
+	.footer-icons{
+		justify-content: space-between;
+		margin-left: 10px;
+		i{
+			font-size: 2em;
+			color: white;
+			padding: 20px;
+		}
+		i:hover{
+			color: $yellow;
+		}
+	}
+}

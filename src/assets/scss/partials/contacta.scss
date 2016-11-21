@@ -1,0 +1,40 @@
+#contacta-container{
+	padding-bottom: $divider;
+	.contacta-header{
+		background-color: $yellow;
+	}
+	.contacta-content{
+		position: relative;
+		button{
+			background-color: $yellow;
+			margin-left: 15px;
+		}
+		input, textarea{
+			border-radius: 5px;
+		}
+		label{
+			font-size: 1.2em;
+			font-weight: 700;
+		}
+		.form-last{
+			.form-last-contact{
+				color: $dark-blue;
+				padding: 10px;
+				font-weight: 700;
+				text-align: right;
+				i{
+					margin-top: 3px;
+					font-size: 1.5em;
+				}
+				p{
+					margin:0;
+				}
+			}
+		}
+		img{
+			position: absolute;
+			right: -200px;
+			top:-150px;
+		}
+	}
+}

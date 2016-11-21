@@ -1,4 +1,5 @@
 #trabajos-container{
+	padding-bottom: $divider;
 	.trabajos-header{
 		background-color: $blue;
 	}
@@ -9,6 +10,7 @@
 			border-radius: 2px;
 			box-shadow: $box-shadow;
 			padding: 10px;
+			margin-bottom: $divider;
 			h3{
 				color: $yellow;
 				font-family: 'Bree Serif', serif;
@@ -50,5 +52,9 @@
 				}
 			}
 		}
+	}
+	.trabajos-button{
+		background-color: $yellow;
+		margin: 0 auto;
 	}
 }
