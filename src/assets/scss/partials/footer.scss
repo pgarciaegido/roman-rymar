@@ -61,11 +61,14 @@
 
 @media (max-width: 641px){
 	#footer-container{
+		img{
+			margin-bottom: 10px;
+		}
 		nav{
 			ul{
 				li{
 					a{
-						font-size:1em;
+						font-size:.8em;
 						padding: 0;
 					}
 				}

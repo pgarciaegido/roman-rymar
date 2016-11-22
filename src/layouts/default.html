@@ -22,5 +22,11 @@
     </div> <!--OFF CANVAS WRAPPER -->
     <script src="{{root}}assets/js/app.js"></script>
     <script src="https://use.fontawesome.com/574a157edd.js"></script>
+    <!-- WORKAROUND FOR TOGGLE BUTTONS WITH IOS -->
+    <script>
+        $(document).foundation();
+        $('.burguer-button').on('click',function(){
+        });
+    </script>
   </body>
 </html>
