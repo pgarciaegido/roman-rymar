@@ -9,3 +9,12 @@
 		font-size: 4.5em;
 	}
 }
+
+@media(max-width: 640px){
+	.section-header{
+		height: 100px;
+		h2{
+			margin-top: 0;
+		}
+	}
+}

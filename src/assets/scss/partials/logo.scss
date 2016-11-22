@@ -10,7 +10,16 @@
 		color: $yellow;
 	}
 	i:hover{
-		color: $blue;
+		color: $soft-yellow;
+		transition: .3s;
+	}
+}
+@media (max-width: 821px){
+	#logo-container{
+		i{
+			font-size: 2em;
+			padding: 5px;
+		}
 	}
 }
 

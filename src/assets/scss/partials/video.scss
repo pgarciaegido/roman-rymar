@@ -4,3 +4,19 @@
 		height: 460px;
 	}
 }
+
+@media (max-width: 769px){
+	#video-container{
+		iframe{
+			height: 350px;
+		}
+	}
+}
+
+@media (max-width: 600px){
+	#video-container{
+		iframe{
+			height: 200px;
+		}
+	}
+}

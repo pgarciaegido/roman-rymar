@@ -15,5 +15,24 @@
 		a:hover{
 			color: $yellow;
 		}
+		.burguer-button{
+			margin-right: 20px;
+			i{
+				color: white;
+				font-size: 2em;
+				margin-right: 5px;
+			}
+		}
+	}
+}
+
+@media(max-width: 700px){
+	#navbar-container{
+		#menu-container{
+			a{
+				font-size: 1em;
+				padding: 8px;
+			}
+		}
 	}
 }

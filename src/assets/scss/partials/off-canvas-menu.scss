@@ -1,0 +1,29 @@
+.off-canvas{
+	background-color: $blue;
+	z-index: 10;
+}
+
+#menu-title{
+	text-align: center;
+	color: white;
+	font-size: 2em;
+	margin-top: 10px;
+}
+
+.off-canvas-wrap{
+	background-color: $blue;
+	#nav-off-canvas{
+		margin-top: 50px;
+		li{
+			background-color: $blue;
+			font-weight: 700;
+			text-align: center;
+			a{
+				color: $yellow;
+				font-size: 1.1em;
+				margin-top: 10px;
+				border-bottom: 1px solid $soft-blue;
+			}
+		}
+	}
+}
