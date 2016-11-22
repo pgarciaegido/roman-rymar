@@ -9,6 +9,9 @@
 			background-color: $yellow;
 			margin-left: 15px;
 		}
+		button:hover{
+			background-color: $soft-yellow;
+		}
 		input, textarea{
 			border-radius: 5px;
 		}
@@ -16,7 +19,11 @@
 			font-size: 1.2em;
 			font-weight: 700;
 		}
+		form{
+			padding-left: 15px;
+		}
 		.form-last{
+			margin-bottom: $divider;
 			.form-last-contact{
 				color: $dark-blue;
 				padding: 10px;
@@ -35,6 +42,63 @@
 			position: absolute;
 			right: -200px;
 			top:-150px;
+			height: 133%;
+			width: auto;
+		}
+	}
+}
+
+@media (max-width: 820px){
+	#contacta-container{
+		.contacta-content{
+			form{
+				button{
+					p{
+						font-size: 1.5em;
+					}
+				}
+			}
+			.form-last{
+				&-contact{
+					p{
+						font-size: 0.7em;
+						padding-top: 1em;
+					}
+				}
+			}
+			img{
+				right: -230px;
+			}
+		}
+	}
+}
+
+@media(max-width: 641px){
+	#contacta-container{
+		padding-bottom: 0;
+		.contacta-content{
+			form{
+				padding: 0 10px;
+			}
+			.form-last{
+				margin-bottom: 0;
+			}
+			img{
+				position: static;
+				width: 100%;
+				padding: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 432px){
+	.form-last{
+		&-contact{
+			p{
+				font-size: 0.7em;
+				padding-top: 1em;
+			}
 		}
 	}
 }

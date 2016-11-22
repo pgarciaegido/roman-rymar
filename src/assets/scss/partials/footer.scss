@@ -8,6 +8,8 @@
 	nav{
 		ul{
 			margin-bottom: $baseline;
+			display: flex;
+			justify-content: space-between;
 			li{
 				a{
 					color: white;
@@ -23,6 +25,7 @@
 	.footer-icons{
 		justify-content: space-between;
 		margin-left: 10px;
+		display: flex;
 		i{
 			font-size: 2em;
 			color: white;
@@ -30,6 +33,43 @@
 		}
 		i:hover{
 			color: $yellow;
+		}
+	}
+}
+
+@media (max-width: 750px){
+	#footer-container{
+		img{
+			width: 132px;
+		}
+		nav{
+			ul{
+				li{
+					a{
+						font-size:1.1em;
+					}
+				}
+			}
+		}
+		.footer-icons{
+			i{
+				padding: 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 641px){
+	#footer-container{
+		nav{
+			ul{
+				li{
+					a{
+						font-size:1em;
+						padding: 0;
+					}
+				}
+			}
 		}
 	}
 }

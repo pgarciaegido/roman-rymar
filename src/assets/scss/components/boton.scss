@@ -6,7 +6,6 @@
 	align-items: center;
 	border-radius: 5px;
 	box-shadow: $box-shadow;
-	margin-bottom: 75px;
 	p{
 		color: white;
 		margin: 0;
@@ -17,7 +16,6 @@
 
 @media (max-width: 640px){
 	.boton{
-		margin-bottom: 10px;
 		p{
 			font-size: 1.5em;
 		}
@@ -26,7 +24,6 @@
 
 @media (max-width: 401px){
 	.boton{
-		margin-bottom: 10px;
 		p{
 			font-size: 1.1em;
 		}
