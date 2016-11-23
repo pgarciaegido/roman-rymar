@@ -72,7 +72,7 @@ body{
 /*
 PARTIALS
 */
-
+	// INDEX
 @import 'partials/off-canvas-menu';
 @import 'partials/nav';
 @import 'partials/logo';
@@ -82,6 +82,8 @@ PARTIALS
 @import 'partials/contacta';
 @import 'partials/footer';
 
+	// ABOUT
+@import 'partials/about';
 /*
 COMPONENTS
 */
