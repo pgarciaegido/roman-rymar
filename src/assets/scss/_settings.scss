@@ -579,6 +579,8 @@ $gray-bg: #F2F2F2;
 $soft-blue:#38697C;
 $soft-yellow: #EAE043;
 
+$white-hover: rgba(255,255,255, 0.8);
+
 /*
 LAYOUT
 */
@@ -589,3 +591,6 @@ $divider: 44px;
 EFFECTS
 */
 $box-shadow:0 3px 8px rgba($black, .2);
+
+$white-hover: rgba(255,255,255, 0.8);
+$img-opacity: .8;

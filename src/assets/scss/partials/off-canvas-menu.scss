@@ -12,8 +12,10 @@
 
 .off-canvas-wrap{
 	background-color: $blue;
+	border: none;
 	#nav-off-canvas{
 		margin-top: 50px;
+		margin-bottom: 50px;
 		li{
 			background-color: $blue;
 			font-weight: 700;
@@ -24,6 +26,16 @@
 				margin-top: 10px;
 				border-bottom: 1px solid $soft-blue;
 			}
+		}
+	}
+	.menu-autor{
+		text-align: center;
+		a{
+			color: white;
+		}
+		p{
+			font-size: .6em;
+			margin-bottom: 0;
 		}
 	}
 }

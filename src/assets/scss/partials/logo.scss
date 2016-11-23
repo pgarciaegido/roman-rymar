@@ -1,8 +1,11 @@
 #logo-container{
 	margin-bottom: $baseline;
-	img{
+	#logo-logo{
 		width: 385px;
 		height: auto;
+	}
+	#logo-logo:hover{
+		opacity: $img-opacity;
 	}
 	i{
 		font-size: 2.5em;
@@ -13,12 +16,26 @@
 		color: $soft-yellow;
 		transition: .3s;
 	}
+	.logo-cine-media{
+		height: 40px;
+		padding-right: 10px;
+	}
+	.logo-cine-media:hover{
+		opacity: $img-opacity;
+	}
 }
+
+
+
 @media (max-width: 821px){
 	#logo-container{
 		i{
 			font-size: 2em;
 			padding: 5px;
+		}
+		.logo-cine-media{
+			height: 30px;
+			padding-right: 7px;
 		}
 	}
 }
