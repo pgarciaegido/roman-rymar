@@ -1,0 +1,241 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Bree+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body>
+    <!-- Este wrap ocupa todo el documento -->
+    <div class="off-canvas-wrap">
+    	<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+    		<div id="offCanvas" class="off-canvas position-left" data-off-canvas>
+    			<h3 id="menu-title">Menú</h3>
+    			<nav id="nav-off-canvas" data-magellan>
+    				<ul class="menu vertical" data-drilldown>
+    					<li><a class="exit-off-canvas" href="./index.html">Home</a></li>
+    					<li><a class="exit-off-canvas" href="./about.html">Biografía</a></li>
+    					<li><a class="exit-off-canvas" href="./cv.html">Trabajos</a></li>
+    					<li><a class="exit-off-canvas" href="./galeria.html">Galería</a></li>
+    					<li><a class="exit-off-canvas" href="./index.html#contacta-container">Contacta</a></li>
+    				</ul>
+    			</nav>
+    			<div class="menu-autor">
+    				<a target="_blank" href="https://www.linkedin.com/in/pablo-garc%C3%ADa-egido-42115359?trk=nav_responsive_tab_profile_pic">
+    					<p class="menu-autor-texto">DESIGN &</br> DEVELOPMENT</p>
+    					<img src="./assets/img/pegido.svg" alt="Pablo Egido" class="menu-autor-logo">
+    				</a>
+    			</div>
+    		</div>
+    		<div class="off-canvas-content" data-off-canvas-content>
+    <!-- TOGGLER IN NAV -->
+    <section id="navbar-container">
+    	<div class="row align-middle">
+    		<div class="column small-7 medium-3">
+    			<img src="./assets/img/logo-white.svg" alt="logo">
+    		</div>
+    		<nav id="menu-container" class="column medium-9 right" data-magellan>
+    			<ul class="menu float-right show-for-medium">
+    				<li><a href="./index.html">Home</a></li>
+    				<li><a id="nav-bio" href="./about.html">Biografía</a></li>
+    				<li><a id="nav-trabajos" href="./cv.html">Trabajos</a></li>
+    				<li><a href="./galeria.html">Galería</a></li>
+    				<li><a id="nav-contacta" href="./#contacta-container">Contacta</a></li>
+    			</ul>
+    			<div data-toggle="offCanvas" class="column small-1 show-for-small-only float-right burguer-button">
+    				<i class="fa fa-bars"></i>
+    			</div>
+    		</nav>
+    	</div>
+    </section>
+    <section id="logo-container" class="text-center">
+    	<div class="row align-middle">	
+    		<div class="column medium-3 show-for-medium align-middle text-left">
+    			<a target="_blank" href="https://www.facebook.com/roman.rymar"><i class="fa fa-facebook-square"></i></a>
+    			<a target="_blank" href="https://twitter.com/RomanRymar"><i class="fa fa-twitter-square"></i></a>
+    			<a target="_blank" href="https://www.instagram.com/romanrymar/"><i class="fa fa-instagram"></i></a>
+    		</div>
+    		<div class="col small-12 medium-6">
+    			<a href="./index.html"><img id="logo-logo" src="./assets/img/logo-blue.svg" alt="Logo"></a>
+    		</div>
+    		<div class="column show-for-medium medium-3 align-middle text-right">
+    			<a target="_blank" href="http://www.imdb.com/name/nm7589532/"><img class="logo-cine-media" src="./assets/img/imdb.svg" alt="IMDB"></a>
+    			<a target="_blank" href="http://www.sensacine.com/actores/actor-748799/"><img class="logo-cine-media" src="./assets/img/scine.svg" alt="SensaCine"></a>
+    		</div>
+    	</div>
+    </section>
+    <section id="video-container">
+    	<div class="row text-center">
+    		<iframe class="column small-10 centered small-offset-1" src="https://player.vimeo.com/video/170245330" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    	</div>
+    </section>
+    <section id="bio-container" data-magellan-target="nav-bio">
+    	<div class="bio-header section-header">
+    		<div class="row">
+    			<h2 class="column small-offset-3">¡Hola!</h2>
+    		</div>
+    	</div>
+    	<div class="bio-content">
+    		<div class="row">
+    			<img src="./assets/img/roman-bio.png" class="show-for-medium" alt="roman-bio">
+    			<h4 class="column small-12 medium-6 medium-offset-6 text-right">Me llamo Roman Rymar y...</h4>
+    			<h1 class="column small-12 medium-offset-4 medium-8 text-right">SOY ACTOR.</h1>
+    			<a href="./galeria.html" id="galeria" class="boton bio-button column small-4 small-offset-1 medium-offset-7 medium-5 large-offset-5 large-3">
+    				<p>Galería</p>
+    			</a>
+    			<a href="/about.html" class="boton bio-button column small-4 small-offset-2 medium-5 medium-offset-7 large-offset-1 large-3">
+    				<p>Conóceme</p>
+    			</a>
+    			<img src="./assets/img/roman-bio-mobile.png" class="show-for-small-only" alt="roman-bio">
+    		</div>
+    	</div>
+    </section>
+    <section id="trabajos-container" data-magellan-target="nav-trabajos">
+    	<div class="trabajos-header section-header">
+    		<div class="row">
+    			<h2 class="column small-offset-5">Trabajos</h2>
+    		</div>
+    	</div>
+    	<div class="trabajos-content">
+    		<div class="row"> 
+    			<div class="column small-12 medium-4 text-center"> <!-- sections -->
+    				<div class="trabajos-topics large-24 columns">	
+    					<h3>Ficción</h3>
+    					<div class="fichas"><!-- fichas -->
+    						<img src="./assets/img/roman-bio.png" height="100" alt="">
+    						<p class="fichas-nombre">"Más Movil"</p>
+    						<p class="fichas-director">Manolo</p>
+    						<p class="fichas-rol">Personaje principal</p>
+    						<p class="fichas-fecha">2016</p>
+    					</div>
+    					<div class="fichas"><!-- fichas -->
+    						<img src="./assets/img/roman-bio.png" height="100" alt="">
+    						<p class="fichas-nombre">"Más Movil"</p>
+    						<p class="fichas-director">Manolo</p>
+    						<p class="fichas-rol">Personaje principal</p>
+    						<p class="fichas-fecha">2016</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="column small-12 medium-4 text-center"> <!-- sections -->
+    				<div class="trabajos-topics large-24 columns">	
+    					<h3>Publicidad</h3>
+    					<div class="fichas"><!-- fichas -->
+    						<img src="./assets/img/roman-bio.png" height="100" alt="">
+    						<p class="fichas-nombre">"Más Movil"</p>
+    						<p class="fichas-director">Manolo</p>
+    						<p class="fichas-rol">Personaje principal</p>
+    						<p class="fichas-fecha">2016</p>
+    					</div>
+    					<div class="fichas"><!-- fichas -->
+    						<img src="./assets/img/roman-bio.png" height="100" alt="">
+    						<p class="fichas-nombre">"Más Movil"</p>
+    						<p class="fichas-director">Manolo</p>
+    						<p class="fichas-rol">Personaje principal</p>
+    						<p class="fichas-fecha">2016</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="column small-12 medium-4 text-center"> <!-- sections -->
+    				<div class="trabajos-topics large-24 columns">	
+    					<h3>Clips | Teatro</h3>
+    					<div class="fichas"><!-- fichas -->
+    						<img src="./assets/img/roman-bio.png" height="100" alt="">
+    						<p class="fichas-nombre">"Más Movil"</p>
+    						<p class="fichas-director">Manolo</p>
+    						<p class="fichas-rol">Personaje principal</p>
+    						<p class="fichas-fecha">2016</p>
+    					</div>
+    					<div class="fichas"><!-- fichas -->
+    						<img src="./assets/img/roman-bio.png" height="100" alt="">
+    						<p class="fichas-nombre">"Más Movil"</p>
+    						<p class="fichas-director">Manolo</p>
+    						<p class="fichas-rol">Personaje principal</p>
+    						<p class="fichas-fecha">2016</p>
+    					</div>
+    		</div>
+    	</div>
+    	<a href="./cv.html" class="boton trabajos-button"><p>Ver más</p></a>
+    </section>
+    <section id="contacta-container" data-magellan-target="nav-contacta">
+    	<div class="contacta-header section-header">
+    		<div class="row">
+    			<h2 class="column small-offset-4 medium-offset-3 large-offset-4">Contacta</h2>
+    		</div>
+    	</div>
+    	<div class="contacta-content">
+    		<div class="row">
+    			<form action="" class="col small-12 medium-6 large-8">
+    				<label for="name">Nombre
+    					<input type="text">
+    				</label>
+    				<label for="email">Email
+    					<input type="email">
+    				</label>
+    				<label for="asunto">Asunto
+    					<textarea name="asunto" id="" cols="30" rows="8"></textarea>
+    				</label>
+    				<div class="row form-last">	
+    					<button type="submit" class="column small-3 boton form-button"><p>Enviar</p></button>
+    					<div class="column small-offset-2 form-last-contact small-6 medium-6">
+    						<div class="form-last-contact-phone row">
+    							<i class="fa fa-phone"></i>
+    							<p class="column text-right">605 51 38 88</p>
+    						</div>
+    						<div class="form-last-contact-mail row">
+    							<i class="fa fa-envelope"></i>
+    							<p class="column text-right">CD-Rom@hotmail.com</p>
+    						</div>
+    					</div>
+    				</div>
+    			</form>
+    			<img src="./assets/img/roman-form.png" alt="Roman-Form" class="column show-for-medium">
+    			<img src="./assets/img/roman-form-mobile.png" alt="Roman-Form" class="show-for-small-only">
+    		</div>
+    	</div>
+    </section>
+    <footer id="footer-container">
+    	<div class="row">
+    		<img src="./assets/img/logo-vertical-white.svg" alt="logo" class="column medium-3 show-for-medium large-2 footer-logo">
+    		<img src="./assets/img/logo-white.svg" alt="logo" id="footer-logo" class="column show-for-small-only small-10 small-offset-1 footer-logo">
+    		<nav class="column small-offset-0 small-12 medium-offset-0 medium-8 large-offset-4 large-5">
+    			<ul class="menu align-between">
+    				<li><a href="./index.html">Home</a></li>
+    				<li><a href="./about.html">Biografía</a></li>
+    				<li><a href="./cv.html">Trabajos</a></li>
+    				<li><a href="./galeria.html">Galería</a></li>
+    				<li><a href="./index.html#contacta-container">Contacta</a></li>
+    			</ul>
+    			<div class="footer-icons">
+    				<a target="_blank" href="https://www.facebook.com/roman.rymar"><i class="fa fa-facebook-square"></i></a>
+    				<a target="_blank" href="https://twitter.com/RomanRymar"><i class="fa fa-twitter-square"></i></a>
+    				<a target="_blank" href="https://www.instagram.com/romanrymar/"><i class="fa fa-instagram"></i></a>
+    				<a target="_blank" href=""><img class="footer-cine-media" src="./assets/img/imdb-white.svg" alt="IMDB"></a>
+    				<a target="_blank" href="http://www.sensacine.com/actores/actor-748799/"><img class="footer-cine-media" src="./assets/img/scine-white.svg" alt="SensaCine"></a>
+    			</div>
+    		</nav>
+    	</div>
+    	<div class="footer-autor">
+    		<a target="_blank" href="https://www.linkedin.com/in/pablo-garc%C3%ADa-egido-42115359?trk=nav_responsive_tab_profile_pic">
+    			<p class="footer-autor-texto">DESIGN &</br> DEVELOPMENT</p>
+    			<img src="./assets/img/pegido.svg" alt="Pablo Egido" class="footer-autor-logo">
+    		</a>
+    	</div>
+    </footer>
+        </div> <!--OFF CANVAS CONTENT-->
+      </div><!--OFF CANVAS WRAPPER INNER -->
+    </div> <!--OFF CANVAS WRAPPER -->
+    <script src="assets/js/app.js"></script>
+    <script src="https://use.fontawesome.com/574a157edd.js"></script>
+    <!-- WORKAROUND FOR TOGGLE BUTTONS WITH IOS -->
+    <script>
+        $(document).foundation();
+        $('.burguer-button').on('click',function(){
+        });
+    </script>
+  </body>
+</html>
