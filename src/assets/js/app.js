@@ -26,9 +26,6 @@ CLOSE OFF CANVAS MENU WHEN CLICKING AN ANCHOR
 */
 function closeOffCanvas(ev){
 	$('#offCanvas').foundation('close');
-	// setTimeout(function(){
-	// 	$sticky.css('left', '0');
-	// }, 300);
 }
 
 
