@@ -1,0 +1,26 @@
+#cv-container{
+	.cv-header{
+		background-color: $yellow;
+	}
+	.cv-content{
+		&-videos{
+			background-color: white;
+			padding-right: 10px;
+			border-radius: 2px;
+			box-shadow: $box-shadow;
+			padding: 10px;
+			margin: 0 15px 50px 15px;
+			ul{
+				display: flex;
+				justify-content: space-around;
+				li{
+					a{
+					color: $yellow;
+					font-family: 'Bree Serif', serif;
+					font-size: 1.5em;
+					}
+				}
+			}
+		}
+	}
+}

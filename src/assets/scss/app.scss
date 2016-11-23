@@ -84,9 +84,17 @@ PARTIALS
 
 	// ABOUT
 @import 'partials/about';
+
+	// GALERIA
+@import 'partials/galeria';
+	
+	// TRABAJOS
+@import 'partials/cv';
+
 /*
 COMPONENTS
 */
 
 @import 'components/boton';
 @import 'components/section-header';
+@import 'components/ficha';

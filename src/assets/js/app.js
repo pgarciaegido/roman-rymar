@@ -31,6 +31,11 @@ function closeOffCanvas(ev){
 	// }, 300);
 }
 
+// $('[data-toggle-panel]').click(function(ev) {
+//   var panel = $(this).data('togglePanel');
+//   $('#panel-tabs').foundation('selectTab', panel)
+// })
+
 /*
 EVENT HANDLERS
 */

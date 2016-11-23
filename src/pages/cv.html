@@ -1,0 +1,23 @@
+<div id="cv-container">
+	<div class="cv-header section-header">
+		<div class="row">
+			<h2 class="column">
+				Trabajos
+			</h2>
+		</div>
+	</div>
+	<div class="cv-content">
+		<div class="cv-content-videos">
+			<ul data-tabs id="panel-tabs" class="tabs centered">
+				<li class="tabs-title is-active"><a href="#panelFiccion">Ficción</a></li>
+				<li class="tabs-title"><a href="#panelPublicidad">Publicidad</a></li>
+				<li class="tabs-title"><a href="#panelClips">Clips|Teatro</a></li>
+			</ul>
+			<div class="tabs-content" data-tabs-content="panel-tabs">
+				{{> cv-ficcion}}
+				{{> cv-publicidad}}
+				{{> cv-clips}}
+			</div><!--TABS CONTENT-->
+		</div>
+	</div>
+</div>
