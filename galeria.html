@@ -78,36 +78,15 @@
     	</div>
     	<div class="galeria-content">
     		<div class="galeria-content-pics">
-    			<div class="row">
+    			<div class="row carousel-imgs text-center">
     				<div class="column small-6 medium-4 large-3" src="./assets/img/roman-bio-mobile.png" alt="">
-    					<img src="./assets/img/roman-bio-mobile.png" alt="">
+    					<img class="carousel-img" src="./assets/img/roman-bio-mobile.png" alt="">
     				</div>
     				<div class="column small-6 medium-4 large-3" src="./assets/img/roman-bio-mobile.png" alt="">
-    					<img src="./assets/img/roman-bio-mobile.png" alt="">
+    					<img class="carousel-img" src="./assets/img/roman-bio-mobile.png" alt="">
     				</div>
     				<div class="column small-6 medium-4 large-3" src="./assets/img/roman-bio-mobile.png" alt="">
-    					<img src="./assets/img/roman-bio-mobile.png" alt="">
-    				</div>
-    				<div class="column small-6 medium-4 large-3" src="./assets/img/roman-bio-mobile.png" alt="">
-    					<img src="./assets/img/roman-bio-mobile.png" alt="">
-    				</div>
-    				<div class="column small-6 medium-4 large-3" src="./assets/img/roman-bio-mobile.png" alt="">
-    					<img src="./assets/img/roman-bio-mobile.png" alt="">
-    				</div>
-    				<div class="column small-6 medium-4 large-3" src="./assets/img/roman-bio-mobile.png" alt="">
-    					<img src="./assets/img/roman-bio-mobile.png" alt="">
-    				</div>
-    				<div class="column small-6 medium-4 large-3" src="./assets/img/roman-bio-mobile.png" alt="">
-    					<img src="./assets/img/roman-bio-mobile.png" alt="">
-    				</div>
-    				<div class="column small-6 medium-4 large-3" src="./assets/img/roman-bio-mobile.png" alt="">
-    					<img src="./assets/img/roman-bio-mobile.png" alt="">
-    				</div>
-    				<div class="column small-6 medium-4 large-3" src="./assets/img/roman-bio-mobile.png" alt="">
-    					<img src="./assets/img/roman-bio-mobile.png" alt="">
-    				</div>
-    				<div class="column small-6 medium-4 large-3" src="./assets/img/roman-bio-mobile.png" alt="">
-    					<img src="./assets/img/roman-bio-mobile.png" alt="">
+    					<img class="carousel-img" src="./assets/img/roman-bio-mobile.png" alt="">
     				</div>
     			</div>
     		</div>
@@ -145,11 +124,18 @@
       </div><!--OFF CANVAS WRAPPER INNER -->
     </div> <!--OFF CANVAS WRAPPER -->
     <script src="assets/js/app.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script src="https://use.fontawesome.com/574a157edd.js"></script>
     <!-- WORKAROUND FOR TOGGLE BUTTONS WITH IOS -->
     <script>
         $(document).foundation();
         $('.burguer-button').on('click',function(){
+        });
+    </script>
+    <script>
+        $('.carousel-imgs').slick({
+            autoplay: true,
+            autoplaySpeed: 4000
         });
     </script>
   </body>
