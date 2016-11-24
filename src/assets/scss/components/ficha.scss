@@ -9,8 +9,7 @@
 	}
 	i{
 		color: white;
-		margin-top: 7px;
-		margin-right: 5px;
+		font-size: 1.5em;
 	}
 	p{
 		color: white;
@@ -32,5 +31,13 @@
 	}
 	&-director{
 		font-style: italic;
+	}
+	iframe{
+		position: absolute;
+		display: none;
+		width: 80vw;
+		height: 80vh;
+		left: calc(50vw - (80vw / 2));
+		z-index: 99999;
 	}
 }
