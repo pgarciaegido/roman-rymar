@@ -16,6 +16,7 @@
 	#nav-off-canvas{
 		margin-top: 50px;
 		margin-bottom: 50px;
+		border: none;
 		li{
 			background-color: $blue;
 			font-weight: 700;
@@ -36,6 +37,14 @@
 		p{
 			font-size: .6em;
 			margin-bottom: 0;
+		}
+	}
+}
+
+@media (max-width: 400px){
+	.off-canvas-wrap{
+		#nav-off-canvas{
+			margin-bottom: 25px;
 		}
 	}
 }

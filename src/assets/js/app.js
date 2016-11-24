@@ -4,7 +4,8 @@ $(document).foundation();
 STICKY HEADER
 */
 function stickyHeader(){
-	if ($(this).scrollTop() > 1){  
+
+	if ($(this).scrollTop() > 150){  
     $('#navbar-container').addClass("sticky");
   }
   else{

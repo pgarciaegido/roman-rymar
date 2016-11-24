@@ -13,8 +13,7 @@
 		color: $yellow;
 	}
 	i:hover{
-		color: $soft-yellow;
-		transition: .3s;
+		opacity: $img-opacity;
 	}
 	.logo-cine-media{
 		height: 40px;
