@@ -36,6 +36,8 @@ function closeOffCanvas(ev){
 
 var tempURL;
 var videoOn = false;
+var $html = document.documentElement;
+
 
 function videos(){
   var top = $(window).scrollTop();
