@@ -29,9 +29,9 @@ function closeOffCanvas(ev){
 	$('#offCanvas').foundation('close');
 }
 
-/*
-SLICK CAROUSEL
-*/
+//AVOID THE OFF-CANVAS
+Foundation.OffCanvas.defaults.forceTop = false;
+Foundation.OffCanvas.defaults.autoFocus = false;
 
 /*
 EVENT HANDLERS
