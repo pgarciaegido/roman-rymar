@@ -28,6 +28,9 @@ function closeOffCanvas(ev){
 	$('#offCanvas').foundation('close');
 }
 
+/*
+SLICK CAROUSEL
+*/
 
 /*
 EVENT HANDLERS

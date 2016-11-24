@@ -87,8 +87,8 @@
     			<a href="./galeria.html" id="galeria" class="boton bio-button column small-4 small-offset-1 medium-offset-7 medium-5 large-offset-5 large-3">
     				<p>Galería</p>
     			</a>
-    			<a href="./about.html" class="boton bio-button column small-4 small-offset-2 medium-5 medium-offset-7 large-offset-1 large-3">
-    				<p>Conóceme</p>
+    			<a href="/about.html" class="boton bio-button column small-4 small-offset-2 medium-5 medium-offset-7 large-offset-1 large-3">
+    				<p>¡¡Conóceme!!</p>
     			</a>
     			<img src="./assets/img/roman-bio-mobile.png" class="show-for-small-only" alt="roman-bio">
     		</div>
@@ -230,11 +230,18 @@
       </div><!--OFF CANVAS WRAPPER INNER -->
     </div> <!--OFF CANVAS WRAPPER -->
     <script src="assets/js/app.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script src="https://use.fontawesome.com/574a157edd.js"></script>
     <!-- WORKAROUND FOR TOGGLE BUTTONS WITH IOS -->
     <script>
         $(document).foundation();
         $('.burguer-button').on('click',function(){
+        });
+    </script>
+    <script>
+        $('.carousel-imgs').slick({
+            autoplay: true,
+            autoplaySpeed: 4000
         });
     </script>
   </body>
