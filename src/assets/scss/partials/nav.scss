@@ -26,6 +26,12 @@
 	}
 }
 
+#nav-container-placeholder{
+	width: 100%;
+	height: 54px;
+	display: none;
+}
+
 .sticky{
 	position: fixed;
 	width: 100%;
@@ -42,6 +48,12 @@
 				padding: 8px;
 			}
 		}
+	}
+}
+
+@media (max-width: 640px){
+	#navbar-container{
+		margin-bottom: 0;
 	}
 }
 

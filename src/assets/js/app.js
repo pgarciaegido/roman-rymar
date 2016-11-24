@@ -7,9 +7,11 @@ function stickyHeader(){
 
 	if ($(this).scrollTop() > 150){  
     $('#navbar-container').addClass("sticky");
+    $('#nav-container-placeholder').css({display: 'block'});
   }
   else{
     $('#navbar-container').removeClass("sticky");
+    $('#nav-container-placeholder').css({display: 'none'});
   }
 }
 
