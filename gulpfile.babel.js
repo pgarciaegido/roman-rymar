@@ -26,11 +26,11 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
+ gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide, cname));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
-  gulp.series('build', server, watch));
+  gulp.series('build', server, watch, cname));
 
 // Delete the "dist" folder
 // This happens every time a build starts
@@ -123,6 +123,12 @@ function server(done) {
     server: PATHS.dist, port: PORT
   });
   done();
+}
+
+//Keeps de CNAME in dist folder
+function cname(){
+  return gulp.src('src/CNAME')
+    .pipe(gulp.dest(PATHS.dist));
 }
 
 // Reload the browser with BrowserSync
