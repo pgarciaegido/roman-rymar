@@ -55,7 +55,6 @@ function videos(){
 function videoOff(){
   if(videoOn){
     $('#dark-bg').css({'display':'none'});
-
     $('#currentlyPlaying').css({'display': 'none'}).attr('src', '');
     $('#currentlyPlaying').attr('src', tempURL);
     $('#currentlyPlaying').removeAttr('id');

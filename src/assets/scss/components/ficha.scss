@@ -50,3 +50,16 @@
 		}
 	}
 }
+
+#currentlyPlaying{
+	animation-name: videoYTentry;
+	animation-duration: .2s;
+}
+
+
+//Animation video
+
+@keyframes videoYTentry{
+	from{transform: scale(0);}
+	to{transform: scale (1);}
+}
