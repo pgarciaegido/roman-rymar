@@ -3,6 +3,12 @@
 		background-color: $blue;
 	}
 	.galeria-content{
+		width: 80%;
+		margin: 0 auto;
+		max-height: 500px;
+		.slick-list{
+			max-height: 500px;
+		}
 		&-pics{
 			background-color: white;
 			box-shadow: $box-shadow;
@@ -12,5 +18,13 @@
 	}
 	.carousel-img{
 		margin: 0 auto;
+	}
+}
+
+@media (max-width: 800px){
+	#galeria-container{
+		.galeria-content{
+			width: 100%;
+		}
 	}
 }
