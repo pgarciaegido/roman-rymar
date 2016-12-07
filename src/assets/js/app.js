@@ -33,7 +33,6 @@ function closeOffCanvas(ev){
 
 //VIDEOS YOUTUBE ON CLICK; THE YOUTUBE SRC NEEDS TO BE CHANGED IN ORDER TO STOP WHEN CLICKED OUT OF IT
 
-
 var tempURL;
 var videoOn = false;
 var $html = document.documentElement;
