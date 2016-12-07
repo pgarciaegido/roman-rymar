@@ -91,7 +91,6 @@ function pictureModalOff(){
     $('.img-modal').remove();
     $('body').css({'overflow':'scroll'});
   }
-
 }
 
 /*
