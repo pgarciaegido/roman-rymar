@@ -64,6 +64,36 @@ function videoOff(){
   }
 }
 
+// MODALS PICTURES IN GALLERY
+
+var pictureOn = false;
+
+function pictureModal(){
+  var top = $(window).scrollTop();
+  $('#dark-bg').css({'display':'block', 'top': top})
+  $('body').css({'overflow':'hidden'});
+
+  var id = $(this).find('img').attr('src');
+  var picId = id.replace('_tn', '').replace('/thumbnails', '');
+  console.log(picId);
+
+  var modal = $('<img />');
+  var insert = modal.attr('src', picId).addClass('img-modal');
+  console.log(insert);
+  $('.galeria-img').append(insert);
+
+  pictureOn = true;
+}
+
+function pictureModalOff(){
+  if(pictureOn){
+    $('#dark-bg').css({'display':'none'});
+    $('.img-modal').remove();
+    $('body').css({'overflow':'scroll'});
+  }
+
+}
+
 /*
 EVENT HANDLERS
 */
@@ -72,3 +102,5 @@ window.addEventListener("hashchange", offsetAnchor);
 $('.exit-off-canvas').on('click', closeOffCanvas);
 $('.fichas').on('click', videos);
 $('#dark-bg').on('click', videoOff);
+$('.galeria-img').on('click', pictureModal);
+$('#dark-bg').on('click', pictureModalOff);
