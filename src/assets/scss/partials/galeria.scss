@@ -6,7 +6,7 @@
 	.galeria-content{
 		&-pic{
 			margin-bottom: 20px;
-			img{
+			img.b-lazy{
 				cursor: pointer;
 			}
 		}

@@ -94,21 +94,22 @@ function pictureModal(){
 
   var id = $(this).find('img').attr('src');
   var picId = id.replace('_tn', '').replace('/thumbnails', '');
-  console.log(picId);
 
   var modal = $('<img />');
   var insert = modal.attr('src', picId).addClass('img-modal');
-  console.log(insert);
-  $('.galeria-img').append(insert);
+  setTimeout(function(){
+    $('.galeria-content').append(insert);
+  },500)
 
   pictureOn = true;
 }
 
-function pictureModalOff(){
+function pictureModalOff(ev){
   if(pictureOn){
+    ev.preventDefault(ev);
+    $('.galeria-content').find($('.img-modal')).remove();
     $('#dark-bg').css({'display':'none'});
-    $('.img-modal').remove();
-    $('body').css({'overflow':'scroll'});
+    $('body').css({'overflow-y':'scroll'});
   }
 }
 
