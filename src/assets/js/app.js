@@ -1,10 +1,24 @@
 $(document).foundation();
 
+/*
+LOADING FOTNS ASYNC
+*/
+WebFont.load({
+  google: {
+    families: ['Lato:400,700,900', 'Bree Serif']
+  }
+});
 
+/*
+LAZY LOADING
+*/
 var bLazy = new Blazy({
   // options
   selector: "img"
 });
+
+
+
 
 /*
 STICKY HEADER
