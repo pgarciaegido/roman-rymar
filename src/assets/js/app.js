@@ -1,5 +1,11 @@
 $(document).foundation();
 
+
+var bLazy = new Blazy({
+  // options
+  selector: "img"
+});
+
 /*
 STICKY HEADER
 */

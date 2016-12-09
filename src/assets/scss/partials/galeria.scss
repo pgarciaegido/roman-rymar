@@ -6,6 +6,9 @@
 	.galeria-content{
 		&-pic{
 			margin-bottom: 20px;
+			img{
+				cursor: pointer;
+			}
 		}
 	}
 }
