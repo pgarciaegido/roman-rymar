@@ -10,13 +10,9 @@
 		text-align: center;
 		padding-bottom: 5px;
 		margin-top: 5px;
-		border-bottom: 1px solid #38697C;
 	}
 	p:first-child{
 		margin-top: 0;
-	}
-	p:last-child{
-		border: none;
 	}
 	&-nombre{
 		font-weight: 700;
@@ -35,11 +31,6 @@
 	}
 	&-top{
 		position: relative;
-		display: flex;
-		justify-content: center;
-		img{
-			height: 100px;
-		}
 		i{
 			color: white;
 			font-size: 1.5em;
