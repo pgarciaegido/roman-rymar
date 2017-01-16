@@ -40,15 +40,15 @@
 		}
 		img{
 			position: absolute;
-			right: -200px;
-			top:-150px;
+			right: -10px;
+			bottom: -44px;
 			height: 133%;
 			width: auto;
-			-webkit-touch-callout: none; 
-			-webkit-user-select: none; 
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
 			-khtml-user-select: none;
-			-moz-user-select: none; 
-			-ms-user-select: none; 
+			-moz-user-select: none;
+			-ms-user-select: none;
 			user-select: none;
 		}
 	}
@@ -73,7 +73,7 @@
 				}
 			}
 			img{
-				right: -230px;
+				right: -50px;
 			}
 		}
 	}
