@@ -3,6 +3,7 @@
 	#logo-logo{
 		width: 385px;
 		height: auto;
+		transition: 0.4s;
 	}
 	#logo-logo:hover{
 		opacity: $img-opacity;
@@ -11,6 +12,7 @@
 		font-size: 2.5em;
 		padding: 10px;
 		color: $yellow;
+		transition: 0.4s;
 	}
 	i:hover{
 		opacity: $img-opacity;

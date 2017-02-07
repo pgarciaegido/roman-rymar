@@ -25,7 +25,7 @@ STICKY HEADER
 */
 function stickyHeader(){
 
-	if ($(this).scrollTop() > 150){  
+	if ($(this).scrollTop() > 150){
     $('#navbar-container').addClass("sticky");
     $('#nav-container-placeholder').css({display: 'block'});
   }
@@ -62,9 +62,9 @@ function videos(){
   var top = $(window).scrollTop();
   var videoTop = top + 100;
 
-  $('#dark-bg').css({'display':'block', 'top': top});
+  $('#dark-bg').css({'visibility':'visible','opacity':'1', 'top': top});
   $(this).find('iframe')
-         .css({'display': 'block', 'top': videoTop})
+         .css({'visibility':'visible','opacity':'1', 'top': videoTop})
          .attr('id','currentlyPlaying');
   tempURL = $('#currentlyPlaying').attr('src');
   $('body').css({'overflow':'hidden'});
@@ -73,8 +73,8 @@ function videos(){
 
 function videoOff(){
   if(videoOn){
-    $('#dark-bg').css({'display':'none'});
-    $('#currentlyPlaying').css({'display': 'none'}).attr('src', '');
+    $('#dark-bg').css({'visibility':'hidden','opacity':'0'});
+    $('#currentlyPlaying').css({'visibility':'hidden','opacity':'0'}).attr('src', '');
     $('#currentlyPlaying').attr('src', tempURL);
     $('#currentlyPlaying').removeAttr('id');
 
@@ -89,7 +89,7 @@ var pictureOn = false;
 
 function pictureModal(){
   var top = $(window).scrollTop();
-  $('#dark-bg').css({'display':'block', 'top': top})
+  $('#dark-bg').css({'visibility':'visible', 'opacity':'1', 'top': top})
   $('body').css({'overflow':'hidden'});
 
   var id = $(this).find('img').attr('src');
@@ -108,7 +108,7 @@ function pictureModalOff(ev){
   if(pictureOn){
     ev.preventDefault(ev);
     $('.galeria-content').find($('.img-modal')).remove();
-    $('#dark-bg').css({'display':'none'});
+    $('#dark-bg').css({'visibility':'hidden', 'opacity':'0'});
     $('body').css({'overflow-y':'scroll'});
   }
 }
