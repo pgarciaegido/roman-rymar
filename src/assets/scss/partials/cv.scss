@@ -3,6 +3,7 @@
 		background-color: $yellow;
 	}
 	.cv-content{
+		padding-bottom: 375px;
 		&-videos{
 			background-color: white;
 			border-radius: 2px;
@@ -29,8 +30,7 @@
 		}
 		.get-cv{
 			background-color: $yellow;
-			margin-bottom: $divider;
-			margin: 0 auto $divider auto;
+			margin: 0 auto;
 		}
 	}
 }
@@ -47,7 +47,7 @@
 					}
 				}
 			}
-		}	
+		}
 	}
 }
 
@@ -63,6 +63,6 @@
 					}
 				}
 			}
-		}	
+		}
 	}
 }
