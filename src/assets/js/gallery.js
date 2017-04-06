@@ -3,9 +3,10 @@
 function renderGalleryPictures () {
   // The loop starts on X number because thats the number of pictures that we have.
   // From the most recent to the older. Check img folder to see.
+  const totalPics = 114
   let $pictContainer = $('#galeria-pics-container')
   let content = ''
-  for (let i = 114; i >= 1; i--) {
+  for (let i = totalPics; i >= 1; i--) {
     content = galleryPicturesTemplate(i)
     $pictContainer.append(content)
   }
@@ -14,7 +15,7 @@ function renderGalleryPictures () {
 // Picture template
 function galleryPicturesTemplate (number) {
   return `<div class="column small-6 medium-4 galeria-content-pic galeria-img">
-            <img class="b-lazy b-loaded" src="./assets/img/thumbnails/roman_tn (${number}).jpg">
+            <img class="b-lazy" src="./assets/img/thumbnails/roman_tn (${number}).jpg">
           </div>`
 }
 
