@@ -1,7 +1,8 @@
+// APP.JS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 $(document).foundation();
 
 // Hold all necesary global variables here...
-var globalVariables = {}
+
 
 /*
 LOADING FOTNS ASYNC
@@ -83,12 +84,7 @@ var youtubeVideos = {
   }
 }
 
-
+// STICKY HEADER, CLOSE OFF-CANVAS AND YOUTUBE VIDEOS EVENT HANDLERS
 stickyHeader.eventHandler()
 closeOffCanvas.eventHandler()
 youtubeVideos.eventHandlers()
-
-
-
-$('.galeria-img').on('click', pictureModal);
-$('#dark-bg').on('click', pictureModalOff);

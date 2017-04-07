@@ -1,8 +1,11 @@
 /* SPECIFIC JS FOR CV (TRABAJOS) LOGICS AND RENDER */
 
+
+var globalVariables = {}
+
 // models. All works done by roman, separated in clips, ficcion and publicidad
 // MODEL CLIPS =================================================================
-const clips = [
+globalVariables.clipsModels = [
   {
     name: 'Mamita Papaya',
     description: 'Don lorenzo, personaje que da nombre a la canción.',
@@ -43,7 +46,19 @@ const clips = [
 
 
 // MODEL PUBLICIDAD ============================================================
-const publicidad = [
+globalVariables.publicidadModels = [
+  {
+    name: 'Paramount Channel',
+    description: 'Chico enamorado de su compañera de piso.',
+    img: 'paramount.png',
+    ytVideo: 'https://www.youtube.com/embed/qREM373P3QU'
+  },
+  {
+    name: 'Vodafone',
+    description: 'Vendedor gruñón en tienda de guitarras.',
+    img: 'vodafone.png',
+    ytVideo: 'https://www.youtube.com/embed/qREM373P3QU'
+  },
   {
     name: 'Dineo',
     description: 'Joven que piensa en divertidas formas de hacer tiempo mientras espera un préstamo.',
@@ -68,12 +83,7 @@ const publicidad = [
     img: 'movistar.png',
     ytVideo: 'https://www.youtube.com/embed/wUOhNTE-ATE'
   },
-  {
-    name: 'Vodafone',
-    description: 'Vendedor gruñón en tienda de guitarras.',
-    img: 'vodafone.png',
-    ytVideo: 'https://www.youtube.com/embed/qREM373P3QU'
-  },
+
   {
     name: 'Selfbank',
     description: 'Consumidor de arte que recibe una sorpresa algo desagradable.',
@@ -101,7 +111,7 @@ const publicidad = [
 ]
 
 // MODEL FICCION ==============================================================
-const ficcion = [
+globalVariables.ficcionModels = [
   {
     name: 'Heroes del mal',
     description: 'Un joven con problemas que es maltratado en el instituto.',
@@ -140,39 +150,69 @@ const ficcion = [
   }
 ]
 
+// Containers cv
+globalVariables.$clipsContainer   = $('#clips-container')
+globalVariables.$publiContainer   = $('#publicidad-container')
+globalVariables.$ficcionContainer = $('#ficcion-container')
+
+// Containers index
+globalVariables.$clipsContainerIndex   = $('#index-cv-clips')
+globalVariables.$publiContainerIndex   = $('#index-cv-publicidad')
+globalVariables.$ficcionContainerIndex = $('#index-cv-ficcion')
+
 // CONTROLLERS ====================================================
 
-function generateCards (collection, container) {
-  for (let c in collection) {
-    let template = cardTemplate(collection[c].name, collection[c].description, collection[c].img, collection[c].ytVideo)
-    container.append(template)
+var cvWorks = {
+  renderCards(collection, container) {
+    for (let c in collection) {
+      let template = this.cardTemplate(collection[c].name, collection[c].description, collection[c].img, collection[c].ytVideo, false)
+      container.append(template)
+    }
+  },
+
+  renderIndex(collection, container) {
+    // There are only two works showing in index.
+    for (let i = 0; i < 2; i++) {
+      let template = this.cardTemplate(collection[i].name, collection[i].description, collection[i].img, collection[i].ytVideo, true)
+      container.append(template)
+    }
+  },
+
+  cardTemplate(name, description, img, ytVideo, index) {
+
+    // If index is false, set those clases to parent div.
+    // In index, fichas have to take 100% width.
+    let cls = index ? '' : 'column small-12 medium-4 large-3 text-center'
+    return `
+    <div class="${cls}">
+      <div class="fichas">
+        <div class="fichas-top">
+          <img src="./assets/img/videos/${img}" height="100" alt="">
+          <i class="fa fa-play"></i>
+          <div class="fichas-top-layoff"></div>
+          <span class="fichas-top-description">${description}</span>
+        </div>
+        <p class="fichas-nombre">${name}</p>
+        <iframe src="${ytVideo}" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>`
   }
 }
 
-// Containers
-let $clipsContainer   = $('#clips-container')
-let $publiContainer   = $('#publicidad-container')
-let $ficcionContainer = $('#ficcion-container')
-
-// Card template
-function cardTemplate (name, description, img, ytVideo) {
-  return `<div class="column small-12 medium-4 large-3 text-center">
-    <div class="fichas">
-      <div class="fichas-top">
-        <img src="./assets/img/videos/${img}" height="100" alt="">
-        <i class="fa fa-play"></i>
-        <div class="fichas-top-layoff"></div>
-        <span class="fichas-top-description">${description}</span>
-      </div>
-      <p class="fichas-nombre">${name}</p>
-      <iframe src="${ytVideo}" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>`
-}
-
+// RENDERS in CV
 // http://localhost:8000/cv.html
 if( window.location.href.split('/').pop().indexOf('cv.html') !== -1) {
-  generateCards(clips, $clipsContainer)
-  generateCards(publicidad, $publiContainer)
-  generateCards(ficcion, $ficcionContainer)
+  cvWorks.renderCards(globalVariables.clipsModels,      globalVariables.$clipsContainer)
+  cvWorks.renderCards(globalVariables.publicidadModels, globalVariables.$publiContainer)
+  cvWorks.renderCards(globalVariables.ficcionModels,    globalVariables.$ficcionContainer)
+}
+
+// RENDERS in INDEX
+// http://localhost:8000/ || http://localhost:8000/index.html
+if (window.location.href.split('/').pop() === 'index.html' ||
+    window.location.href.split('/').pop() === '') {
+
+  cvWorks.renderIndex(globalVariables.clipsModels,      globalVariables.$clipsContainerIndex)
+  cvWorks.renderIndex(globalVariables.publicidadModels, globalVariables.$publiContainerIndex)
+  cvWorks.renderIndex(globalVariables.ficcionModels,    globalVariables.$ficcionContainerIndex)
 }
