@@ -1,21 +1,40 @@
 // GALLERY.JS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // RENDER GALLERY PICTURES DINAMICALLY
 
-var globalVariables = {}
 
+
+// Lógica para hacer lazy loading casero.
+// Append pics de 20 en 20. Poner un event handler para que cuando se toque bottom
+// hacer otro append de 20.
+
+// Entonces, hay que tener un counter que vea cuantas se han appended, e ir actualizandolo
 globalVariables.pictureOn = false;
+globalVariables.totalPics = 114;
+globalVariables.remainingPics = 114;
 
 var gallery = {
-  render(){
-    // The loop starts on X number because thats the number of pictures that we have.
-    // From the most recent to the older. Check img folder to see.
-    const totalPics = 114
+  appendPictures(){
+    let rp = globalVariables.remainingPics
+    console.log(rp)
+    if (rp > 20) {
+      let number = rp - 20
+      this.loop(rp, number, number)
+    }
+
+    else if (rp < 20 && rp > 0) {
+      this.loop(rp, 1, 0)
+    }
+  },
+
+  loop(rp, l, remain) {
     let $pictContainer = $('#galeria-pics-container')
     let content = ''
-    for (let i = totalPics; i >= 1; i--) {
+
+    for (let i = rp; i >= l; i--) {
       content = this.template(i)
       $pictContainer.append(content)
     }
+    globalVariables.remainingPics = remain;
   },
 
   template(number){
@@ -58,7 +77,15 @@ var gallery = {
 // RENDER
 // http://localhost:8000/galeria.html
 if (window.location.href.split('/').pop() === 'galeria.html'){
-  gallery.render()
+  gallery.appendPictures()
+
+  window.onscroll = function(ev) {
+      if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+          gallery.appendPictures()
+          console.log(globalVariables.remainingPics)
+          console.log('pics appended')
+      }
+  };
 }
 
 // GALLERY EVENT HANDLERS
