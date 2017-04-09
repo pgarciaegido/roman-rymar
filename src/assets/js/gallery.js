@@ -1,21 +1,16 @@
 // GALLERY.JS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // RENDER GALLERY PICTURES DINAMICALLY
 
-
-
-// Lógica para hacer lazy loading casero.
-// Append pics de 20 en 20. Poner un event handler para que cuando se toque bottom
-// hacer otro append de 20.
-
-// Entonces, hay que tener un counter que vea cuantas se han appended, e ir actualizandolo
 globalVariables.pictureOn = false;
 globalVariables.totalPics = 114;
 globalVariables.remainingPics = 114;
 
 var gallery = {
+  // Appends 20 pictures if available
   appendPictures(){
     let rp = globalVariables.remainingPics
-    console.log(rp)
+
+    // If there are more than 20 pictures not rendered
     if (rp > 20) {
       let number = rp - 20
       this.loop(rp, number, number)
@@ -25,7 +20,7 @@ var gallery = {
       this.loop(rp, 1, 0)
     }
   },
-
+  // (remainPictures, append 20 pics or less, remainingPics after loop)
   loop(rp, l, remain) {
     let $pictContainer = $('#galeria-pics-container')
     let content = ''
@@ -55,9 +50,10 @@ var gallery = {
 
     var modal = $('<img />');
     var insert = modal.attr('src', picId).addClass('img-modal');
+    // Takes half a second to append pic. Better ux
     setTimeout(function(){
       $('.galeria-content').append(insert);
-    },500)
+    },400)
 
     globalVariables.pictureOn = true;
   },
@@ -79,15 +75,13 @@ var gallery = {
 if (window.location.href.split('/').pop() === 'galeria.html'){
   gallery.appendPictures()
 
+  // GALLERY EVENT HANDLERS
+  // When scroll down append  new pics
   window.onscroll = function(ev) {
-      if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
-          gallery.appendPictures()
-          console.log(globalVariables.remainingPics)
-          console.log('pics appended')
-      }
+    if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+        gallery.appendPictures()
+    }
   };
+  $(document).on("click",'.galeria-img', gallery.pictureModalOn)
+  $('#dark-bg').on('click', gallery.pictureModalOff);
 }
-
-// GALLERY EVENT HANDLERS
-$('.galeria-img').on('click', gallery.pictureModalOn);
-$('#dark-bg').on('click', gallery.pictureModalOff);

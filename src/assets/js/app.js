@@ -58,10 +58,12 @@ var youtubeVideos = {
     var videoTop = top + 100;
 
     $('#dark-bg').css({'visibility':'visible','opacity':'1', 'top': top});
-    $(this).find('iframe')
-           .css({'visibility':'visible','opacity':'1', 'top': videoTop})
-           .attr('id','currentlyPlaying');
-    globalVariables.tempURL = $('#currentlyPlaying').attr('src');
+    let link = $(this).find('.youtube-video-link').attr('data-yt')
+    let template = `<iframe src="${link}" frameborder="0" allowfullscreen=""
+                    id="currentlyPlaying" style="visibility: visible; opacity: 1;
+                    top: ${videoTop}px;"></iframe>`
+    $(this).append(template)
+    globalVariables.tempURL = link
     $('body').css({'overflow':'hidden'});
     globalVariables.videoOn = true;
   },
@@ -69,10 +71,7 @@ var youtubeVideos = {
   closeVideo(){
     if(globalVariables.videoOn){
       $('#dark-bg').css({'visibility':'hidden','opacity':'0'});
-      $('#currentlyPlaying').css({'visibility':'hidden','opacity':'0'}).attr('src', '');
-      $('#currentlyPlaying').attr('src', globalVariables.tempURL);
-      $('#currentlyPlaying').removeAttr('id');
-
+      $('#currentlyPlaying').remove()
       $('body').css({'overflow':'scroll'});
       globalVariables.videoOn = false;
     }

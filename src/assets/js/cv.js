@@ -193,7 +193,7 @@ var cvWorks = {
           <span class="fichas-top-description">${description}</span>
         </div>
         <p class="fichas-nombre">${name}</p>
-        <iframe src="${ytVideo}" frameborder="0" allowfullscreen></iframe>
+        <input class="youtube-video-link" type="hidden" data-yt="${ytVideo}" />
       </div>
     </div>`
   }
