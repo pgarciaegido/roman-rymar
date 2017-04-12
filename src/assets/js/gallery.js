@@ -1,14 +1,16 @@
 // GALLERY.JS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // RENDER GALLERY PICTURES DINAMICALLY
 
-globalVariables.pictureOn = false;
-globalVariables.totalPics = 114;
-globalVariables.remainingPics = 114;
+var gV = gV || {};
 
-var gallery = {
+gV.pictureOn = false;
+gV.totalPics = 114;
+gV.remainingPics = 114;
+
+gV.gallery = {
   // Appends 20 pictures if available
   appendPictures(){
-    let rp = globalVariables.remainingPics
+    let rp = gV.remainingPics
 
     // If there are more than 20 pictures not rendered
     if (rp > 20) {
@@ -29,7 +31,7 @@ var gallery = {
       content = this.template(i)
       $pictContainer.append(content)
     }
-    globalVariables.remainingPics = remain;
+    gV.remainingPics = remain;
   },
 
   template(number){
@@ -55,12 +57,12 @@ var gallery = {
       $('.galeria-content').append(insert);
     },400)
 
-    globalVariables.pictureOn = true;
+    gV.pictureOn = true;
   },
 
   pictureModalOff(ev){
     // Removes image - modal.
-    if(globalVariables.pictureOn){
+    if(gV.pictureOn){
       ev.preventDefault(ev);
       $('.galeria-content').find($('.img-modal')).remove();
       $('#dark-bg').css({'visibility':'hidden', 'opacity':'0'});
@@ -73,15 +75,15 @@ var gallery = {
 // RENDER
 // http://localhost:8000/galeria.html
 if (window.location.href.split('/').pop() === 'galeria.html'){
-  gallery.appendPictures()
+  gV.gallery.appendPictures()
 
   // GALLERY EVENT HANDLERS
   // When scroll down append  new pics
   window.onscroll = function(ev) {
     if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
-        gallery.appendPictures()
+        gV.gallery.appendPictures()
     }
   };
-  $(document).on("click",'.galeria-img', gallery.pictureModalOn)
-  $('#dark-bg').on('click', gallery.pictureModalOff);
+  $(document).on("click",'.galeria-img', gV.gallery.pictureModalOn)
+  $('#dark-bg').on('click', gV.gallery.pictureModalOff);
 }

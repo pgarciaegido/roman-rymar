@@ -1,11 +1,11 @@
 /* SPECIFIC JS FOR CV (TRABAJOS) LOGICS AND RENDER */
 
 
-var globalVariables = {}
+var gV = gV || {};
 
 // models. All works done by roman, separated in clips, ficcion and publicidad
 // MODEL CLIPS =================================================================
-globalVariables.clipsModels = [
+gV.clipsModels = [
   {
     name: 'Mamita Papaya',
     description: 'Don lorenzo, personaje que da nombre a la canción.',
@@ -46,7 +46,7 @@ globalVariables.clipsModels = [
 
 
 // MODEL PUBLICIDAD ============================================================
-globalVariables.publicidadModels = [
+gV.publicidadModels = [
   {
     name: 'Paramount Channel',
     description: 'Chico enamorado de su compañera de piso.',
@@ -111,7 +111,7 @@ globalVariables.publicidadModels = [
 ]
 
 // MODEL FICCION ==============================================================
-globalVariables.ficcionModels = [
+gV.ficcionModels = [
   {
     name: 'Heroes del mal',
     description: 'Un joven con problemas que es maltratado en el instituto.',
@@ -151,18 +151,18 @@ globalVariables.ficcionModels = [
 ]
 
 // Containers cv
-globalVariables.$clipsContainer   = $('#clips-container')
-globalVariables.$publiContainer   = $('#publicidad-container')
-globalVariables.$ficcionContainer = $('#ficcion-container')
+gV.$clipsContainer   = $('#clips-container')
+gV.$publiContainer   = $('#publicidad-container')
+gV.$ficcionContainer = $('#ficcion-container')
 
 // Containers index
-globalVariables.$clipsContainerIndex   = $('#index-cv-clips')
-globalVariables.$publiContainerIndex   = $('#index-cv-publicidad')
-globalVariables.$ficcionContainerIndex = $('#index-cv-ficcion')
+gV.$clipsContainerIndex   = $('#index-cv-clips')
+gV.$publiContainerIndex   = $('#index-cv-publicidad')
+gV.$ficcionContainerIndex = $('#index-cv-ficcion')
 
 // CONTROLLERS ====================================================
 
-var cvWorks = {
+gV.cvWorks = {
   renderCards(collection, container) {
     for (let c in collection) {
       let template = this.cardTemplate(collection[c].name, collection[c].description, collection[c].img, collection[c].ytVideo, false)
@@ -199,12 +199,48 @@ var cvWorks = {
   }
 }
 
+//VIDEOS YOUTUBE ON CLICK; THE YOUTUBE SRC NEEDS TO BE CHANGED IN ORDER TO STOP WHEN CLICKED OUT OF IT
+gV.tempURL = null
+gV.videoOn = false
+
+gV.youtubeVideos = {
+
+  openVideo(){
+    var top = $(window).scrollTop();
+    var videoTop = top + 100;
+
+    $('#dark-bg').css({'visibility':'visible','opacity':'1', 'top': top});
+    let link = $(this).find('.youtube-video-link').attr('data-yt')
+    let template = `<iframe src="${link}" frameborder="0" allowfullscreen=""
+                    id="currentlyPlaying" style="visibility: visible; opacity: 1;
+                    top: ${videoTop}px;"></iframe>`
+    $(this).append(template)
+    gV.tempURL = link
+    $('body').css({'overflow':'hidden'});
+    gV.videoOn = true;
+  },
+
+  closeVideo(){
+    if(gV.videoOn){
+      $('#dark-bg').css({'visibility':'hidden','opacity':'0'});
+      $('#currentlyPlaying').remove()
+      $('body').css({'overflow':'scroll'});
+      gV.videoOn = false;
+    }
+  },
+
+  eventHandlers(){
+    $('.fichas').on('click', this.openVideo);
+    $('#dark-bg').on('click', this.closeVideo);
+  }
+}
+
 // RENDERS in CV
 // http://localhost:8000/cv.html
 if( window.location.href.split('/').pop().indexOf('cv.html') !== -1) {
-  cvWorks.renderCards(globalVariables.clipsModels,      globalVariables.$clipsContainer)
-  cvWorks.renderCards(globalVariables.publicidadModels, globalVariables.$publiContainer)
-  cvWorks.renderCards(globalVariables.ficcionModels,    globalVariables.$ficcionContainer)
+  gV.cvWorks.renderCards(gV.clipsModels,      gV.$clipsContainer)
+  gV.cvWorks.renderCards(gV.publicidadModels, gV.$publiContainer)
+  gV.cvWorks.renderCards(gV.ficcionModels,    gV.$ficcionContainer)
 }
 
 // RENDERS in INDEX
@@ -212,7 +248,9 @@ if( window.location.href.split('/').pop().indexOf('cv.html') !== -1) {
 if (window.location.href.split('/').pop() === 'index.html' ||
     window.location.href.split('/').pop() === '') {
 
-  cvWorks.renderIndex(globalVariables.clipsModels,      globalVariables.$clipsContainerIndex)
-  cvWorks.renderIndex(globalVariables.publicidadModels, globalVariables.$publiContainerIndex)
-  cvWorks.renderIndex(globalVariables.ficcionModels,    globalVariables.$ficcionContainerIndex)
+  gV.cvWorks.renderIndex(gV.clipsModels,      gV.$clipsContainerIndex)
+  gV.cvWorks.renderIndex(gV.publicidadModels, gV.$publiContainerIndex)
+  gV.cvWorks.renderIndex(gV.ficcionModels,    gV.$ficcionContainerIndex)
 }
+
+gV.youtubeVideos.eventHandlers()
