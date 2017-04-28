@@ -210,6 +210,7 @@ gV.youtubeVideos = {
     var videoTop = top + 100;
 
     $('#dark-bg').css({'visibility':'visible','opacity':'1', 'top': top});
+    $('.icon-close').css({'display': 'block'});
     let link = $(this).find('.youtube-video-link').attr('data-yt')
     let template = `<iframe src="${link}" frameborder="0" allowfullscreen=""
                     id="currentlyPlaying" style="visibility: visible; opacity: 1;
@@ -223,6 +224,7 @@ gV.youtubeVideos = {
   closeVideo(){
     if(gV.videoOn){
       $('#dark-bg').css({'visibility':'hidden','opacity':'0'});
+      $('.icon-close').css({'display': 'none'});
       $('#currentlyPlaying').remove()
       $('body').css({'overflow':'scroll'});
       gV.videoOn = false;
@@ -235,6 +237,7 @@ gV.youtubeVideos = {
     // Avoids scrolling
     $('#dark-bg').on('mousedown', this.closeVideo);
     $('#dark-bg').on('touchstart', this.closeVideo);
+    $('.icon-close').on('click', this.closeVideo);
   }
 }
 

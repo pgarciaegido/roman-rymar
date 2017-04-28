@@ -80,6 +80,17 @@ body{
 		cursor: pointer;
 		transition: 0.4s;
 	}
+
+	.icon-close{
+		display: none;
+		position: fixed;
+		top: 60px;
+		right: 20px;
+		color: white;
+		font-size: 3em;
+		z-index: 99999999;
+		cursor: pointer;
+	}
 }
 .overflow-html{
 	overflow: hidden;

@@ -44,7 +44,8 @@ gV.gallery = {
   pictureModalOn(){
     // Inserts an full resolution picture on click
     var top = $(window).scrollTop();
-    $('#dark-bg').css({'visibility':'visible', 'opacity':'1', 'top': top})
+    $('#dark-bg').css({'visibility':'visible', 'opacity':'1', 'top': top});
+    $('.icon-close').css({'display': 'block'});
     $('body').css({'overflow':'hidden'});
 
     var id = $(this).find('img').attr('src');
@@ -66,6 +67,7 @@ gV.gallery = {
       ev.preventDefault(ev);
       $('.galeria-content').find($('.img-modal')).remove();
       $('#dark-bg').css({'visibility':'hidden', 'opacity':'0'});
+      $('.icon-close').css({'display': 'none'})
       $('body').css({'overflow-y':'scroll'});
     }
   }
@@ -90,4 +92,5 @@ if (window.location.href.split('/').pop() === 'galeria.html'){
   // If user holds click on screen (like scrolling), remove pic.
   $('#dark-bg').on('mousedown', gV.gallery.pictureModalOff);
   $('#dark-bg').on('touchstart', gV.gallery.pictureModalOff);
+  $('.icon-close').on('click', gV.gallery.pictureModalOff);
 }
