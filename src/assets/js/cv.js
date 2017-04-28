@@ -232,6 +232,9 @@ gV.youtubeVideos = {
   eventHandlers(){
     $('.fichas').on('click', this.openVideo);
     $('#dark-bg').on('click', this.closeVideo);
+    // Avoids scrolling
+    $('#dark-bg').on('mousedown', this.closeVideo);
+    $('#dark-bg').on('touchstart', this.closeVideo);
   }
 }
 

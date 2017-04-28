@@ -70,7 +70,8 @@ body{
 
 	#dark-bg{
 		width: 100%;
-		height: 100%;
+		/* hack to fill all mobile window */
+		height: 150%;
 		background-color: black;
 		position: absolute;
 		z-index: 1999;

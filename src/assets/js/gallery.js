@@ -75,15 +75,19 @@ gV.gallery = {
 // RENDER
 // http://localhost:8000/galeria.html
 if (window.location.href.split('/').pop() === 'galeria.html'){
-  gV.gallery.appendPictures()
+  gV.gallery.appendPictures();
 
   // GALLERY EVENT HANDLERS
   // When scroll down append  new pics
   window.onscroll = function(ev) {
     if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
-        gV.gallery.appendPictures()
+        gV.gallery.appendPictures();
     }
   };
-  $(document).on("click",'.galeria-img', gV.gallery.pictureModalOn)
+  $(document).on("click",'.galeria-img', gV.gallery.pictureModalOn);
   $('#dark-bg').on('click', gV.gallery.pictureModalOff);
+
+  // If user holds click on screen (like scrolling), remove pic.
+  $('#dark-bg').on('mousedown', gV.gallery.pictureModalOff);
+  $('#dark-bg').on('touchstart', gV.gallery.pictureModalOff);
 }
